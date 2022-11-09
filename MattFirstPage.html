@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer form</title>
+        <Link href="style1.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+        <script>
+
+            const hideButton = document.getElementById("hide");
+            const instructionsList = documument.querySelector(".instructions")
+    
+            function toggleInstruction() {
+                const isHidden = instructionList.style.display ==="none";
+    
+                if(isHidden) {
+                    instructionsList.style.display = "block";
+                    hideButton.innerHTML = "Hide List";
+                } else {
+                    // Hide element
+                    instructionsList.style.display = "none";
+                    hideButton.innerHTML = "Show List";
+                }
+            }
+        </script>
+    </head>
+    <body class="container">
+        <h1>Customer form</h1>
+        <h2>Instructions</h2>
+
+        <Button onclick="toggleInstruction"></Button>
+        <ul>
+            <li>Complete the fields</li>
+            <li>Press the send button</li>
+        </ul>
+
+        <h2 class="mini-heading">Customer information</h2>
+        <form action="https://some-server123.com/customer" method="get" >
+                <label for="job-title">Job title</label>
+                <select name="jt" id="job-title" required>
+                    <option value="" disabled selected >please select</option>
+                    <option value="trainee">trainee</option>
+                    <option value="professional">professional</option>
+                </select>
+                <br>
+                <label for="customer-name" >Customer name</label>
+                <input type="text" name="customer-name" id="customer-name">
+                <br>
+                <label>Choose your favourite colour</label>
+                <input type="color">
+                <br>
+                <label>Select your birthday</label>
+                <input type="date">
+                <br>
+
+                <button type="submit">Send</button>
+        </form> 
+    </body>
+</html>

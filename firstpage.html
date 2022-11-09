@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script>
+
+        function toggleInstruction() {
+            const hideButton = document.getElementById("hide");
+            const instructionsList = documument.querySelector(".instructions")
+
+            const isHidden = instructionList.style.display ==="none";
+
+            if(isHidden) {
+                instructionsList.style.display = "block";
+                hideButton.innerHTML = "Hide List";
+            } else {
+                // Hide element
+                instructionsList.style.display = "none";
+                hideButton.innerHTML = "Show List";
+            }
+        }
+    </script>
+    <title>Excerxise 1</title>
+</head>
+
+<body>
+
+    <h1>Customer Form</h1>
+    <h2>Instructions</h2>
+
+    <button onclick="toggleInstruction()" id="hide">Instruction</button>
+
+    <div class="instructions" >
+        <ul id="instructions">
+            <li>Complete the fields</li>
+            <li>Press Submit</li>
+        </ul>
+    </div>
+    
+
+    <form action="https://some-server.com/customer" method="post">
+        <label for="job-title">Job Title</label>
+        <select name="jt">
+            <option diabled selected>Please Select</option>
+            <option value="trainee">Traineee</option>
+            <option value="professional">Professional</option>
+            
+        </select>
+
+        <br>
+
+        <label for="name">name</label>
+        <input type="text" id="name">
+
+        <br>
+    
+        <label for="address">Address</label>
+        <input type="text" name="address">
+    
+        <br>
+    
+        <select name="country">
+            <option value="Ireland">Ireland</option>
+            <option value="England">England</option>
+            <option value="Scotland">Scotland</option>
+            <option value="Wales">Wales</option>
+        </select>
+        
+        <br>
+        
+        <button type="submit">Send</button>
+
+    </form>
+
+    
+
+
+</body>
+
+
+</html>

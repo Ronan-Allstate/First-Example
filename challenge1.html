@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <script>
+            function greetMe() {
+                const nameInput = document.getElementById("name");
+                const resultsDiv = document.getElementById("results");
+
+                const ageInput = document.getElementById("year")
+
+                const currentYear = new Date().getFullYear();
+                let age = currentYear - ageInput.value;
+                console.log(nameInput.value);
+                resultsDiv.innerHTML = `Hello ${nameInput.value} your age is ${age}`;
+
+
+                if(age === 21) {
+                    console.log("You are 21")
+                }
+
+                if(age !== 21) {
+                    console.log("You are not 21")
+                }
+
+                age += 10;
+                age ++;
+                console.log("Next year you will be ", age);
+                console.log("a year later you will be " + ++age);
+                console.log(age);
+
+                const today = new Date();
+                console.log(today);
+                const anotherDate = new Date();
+                console.log(today.toDateString());
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript Challenge 1</h1>
+
+        <p>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+        </p>
+
+        <p>
+            <label for="year">Year</label>
+            <input id="year" type="number">
+        </p>
+
+        <p><button onclick="greetMe()">Greet Me</button></p>
+
+        <div id="results">
+
+
+
+        </div>
+        
+    </body>
+</html>
